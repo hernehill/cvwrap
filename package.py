@@ -11,7 +11,6 @@ description = '''Maya plugin for rigging'''
 with scope('config') as c:
     import os
     c.release_packages_path = os.environ['HH_REZ_REPO_RELEASE_EXT']
-    c.build_thread_count = 1
     c.plugins.release_hook.hh_emailer.recipients = []
 
 requires = [
