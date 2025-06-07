@@ -29,3 +29,7 @@ _ReSharper*/
 [Bb]uild*/
 [Tt]est[Rr]esult*
 .idea
+
+# HH
+_rez_build
+.vscode
