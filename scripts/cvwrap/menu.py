@@ -2,10 +2,16 @@ import maya.cmds as cmds
 import maya.mel as mel
 import maya.OpenMayaUI as OpenMayaUI
 import os
-if cmds.about(api=True) >= 201700:
-    from PySide2 import QtGui
+
+API_VER = cmds.about(api=True)
+
+if API_VER >= 202500:
+    from PySide6 import QtWidgets as QtGui
+elif (API_VER >= 201700) and (API_VER < 202500):
+    from PySide2 import QtWidgets as QtGui
 else:
     from PySide import QtGui
+
 import cvwrap.bindui
 
 NAME_WIDGET = 'cvwrap_name'

@@ -1,8 +1,15 @@
+
 import maya.cmds as cmds
-if cmds.about(api=True) >= 201700:
+
+API_VER = cmds.about(api=True)
+
+if API_VER >= 202500:
+    from PySide6 import QtWidgets as QtGui
+elif (API_VER >= 201700) and (API_VER < 202500):
     from PySide2 import QtWidgets as QtGui
 else:
     from PySide import QtGui
+
 from functools import partial
 from maya.app.general.mayaMixin import MayaQWidgetBaseMixin
 

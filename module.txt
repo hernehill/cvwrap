@@ -1,1 +1,9 @@
-+ ${PROJECT_NAME} 1.0.0 ${PROJECT_PATH}
++ ${PROJECT_NAME} 1.0.0 ${CMAKE_INSTALL_PREFIX}
+icons:
+plug-ins: plug-ins
+presets:
+scripts: scripts
+resources:
+PYTHONPATH+:=scripts
+MAYA_SCRIPT_PATH+:=lib/python
+LD_LIBRARY_PATH+:=plug-ins

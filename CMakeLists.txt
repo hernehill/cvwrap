@@ -7,6 +7,6 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 
 add_subdirectory(src)
 
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/module.txt" "${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}.txt")
+configure_file("${CMAKE_CURRENT_SOURCE_DIR}/module.txt" "${CMAKE_INSTALL_PREFIX}/${PROJECT_NAME}.mod")
 
 install(DIRECTORY scripts DESTINATION .)

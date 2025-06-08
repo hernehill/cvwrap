@@ -14,19 +14,21 @@ with scope('config') as c:
     c.plugins.release_hook.hh_emailer.recipients = []
 
 requires = [
-    "maya",
 ]
 
 private_build_requires = [
 ]
 
 variants = [
+    ["maya-2025"],
+    ["maya-2026"],
 ]
 
 def commands():
     env.REZ_CVWRAP_ROOT = '{root}'
     env.LD_LIBRARY_PATH.prepend('{root}/plug-ins')
     env.PYTHONPATH.prepend('{root}/scripts')
+    env.MAYA_MODULE_PATH.prepend('{root}')
 
 
 uuid = 'repository.cvwrap'
