@@ -17,16 +17,17 @@ requires = [
 ]
 
 private_build_requires = [
+    "visual_studio",
 ]
 
 variants = [
-    ["maya-2025"],
+    # ["maya-2025"],
     ["maya-2026"],
 ]
 
 def commands():
     env.REZ_CVWRAP_ROOT = '{root}'
-    env.LD_LIBRARY_PATH.prepend('{root}/plug-ins')
+    env.PATH.prepend('{root}/plug-ins')
     env.PYTHONPATH.prepend('{root}/scripts')
     env.MAYA_MODULE_PATH.prepend('{root}')
 
